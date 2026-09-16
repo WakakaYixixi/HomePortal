@@ -1,5 +1,8 @@
 FROM nginx:alpine
 
+# Project revision counter. Increment by 1 for each completed project change.
+LABEL version="1"
+
 RUN rm -rf /usr/share/nginx/html/*
 
 COPY nginx/default.conf /etc/nginx/conf.d/default.conf
