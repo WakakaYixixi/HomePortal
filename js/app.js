@@ -23,6 +23,12 @@ const services = [
     url: "https://speed.maskpic.com",
     icon: "speed",
   },
+  {
+    name: "DMHY Tool",
+    description: "DMHY search and download tool",
+    url: "https://dmhy.maskpic.com",
+    icon: "dmhy",
+  },
 ];
 
 const grid = document.querySelector("#services-grid");
