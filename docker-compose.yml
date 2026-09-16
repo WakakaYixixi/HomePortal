@@ -1,0 +1,16 @@
+services:
+  home:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: home-portal
+    ports:
+      - "${HOST_PORT:-18080}:80"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
